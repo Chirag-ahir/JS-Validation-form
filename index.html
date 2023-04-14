@@ -14,19 +14,39 @@
         <div id="error_message">
            
         </div>
-        <form action="" method="get" id="myform" onsubmit = "return validate();">
+        <form  method="get" id="myform" onsubmit = "return validate();">
           <div class="input_field">
-              <input type="text" placeholder="Name" id="name">
+              <input type="text" placeholder="First Name" id="firstName" required>
           </div>
           <div class="input_field">
-              <input type="text" placeholder="Subject" id="subject">
+              <input type="text" placeholder="Last Name" id="lastName">
           </div>
           <div class="input_field">
-              <input type="text" placeholder="Phone" id="phone">
+              <input type="text" placeholder="Phone" id="phone" required>
           </div>
           <div class="input_field">
-              <input type="text" placeholder="Email" id="email">
+              <input type="email" placeholder="Email" id="email" required>
           </div>
+
+          <div class="input_field pinvalid" id="pfield">
+              <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="pass1" required>
+          </div>
+
+          <div id="message">
+            <p id="length" class="invalid">Password must be 8 to 12 characters</p>
+            <p id="letter" class="invalid">Include lowercase letter</p>
+            <p id="capital" class="invalid">Include one uppercase letter</p>
+            <p id="spchar" class="invalid">Include one special character</p>
+            <p id="number" class="invalid">Include one number</p>
+          </div>
+
+          <div class="input_field">
+              <input type="password" placeholder="Confirm password" id="pass2" required>
+          </div>
+          <div id="message1">
+            <p id="cmessage" class="invalid">Passwords do not match</p>
+          </div>
+
 
           <div class="btn">
               <input type="submit">
