@@ -39,6 +39,8 @@ body{
 }
 
 .wrapper .input_field input[type="text"],
+.input_field input[type="email"],
+.input_field input[type="password"],
 .wrapper textarea{
   border: 1px solid #e0e0e0;
   width: 100%;
@@ -67,4 +69,44 @@ body{
   text-align: center;
   font-size: 14px;
   transition: all 0.5s ease;
+}
+
+
+
+/* Password validation styles */
+/* The message box is shown when the user clicks on the password field */
+#message , #message1{
+  display:none;
+  color: #000;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  content: "✔";
+  margin-right: 10px;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+.pinvalid{
+  border-bottom: 1px solid red;
+}
+.pvalid{
+  border-bottom: 0px;
+}
+
+.invalid:before {
+  position: relative;
+  content: "✖";
+  margin-right: 10px;
 }
